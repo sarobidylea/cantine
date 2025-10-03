@@ -1,41 +1,161 @@
-@import url('https://fonts.googleapis.com/css2?family=poppins:wght@300;400;600&display=swap');
-*{
+body{
     margin: 0;
-    padding:0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Poppins',sans-serif;
+    background:url('/image/fond1.jpeg') no-repeat center center/cover ;
+    color: white;
+  
+}
+.over{
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   background: rgba(0,0,0,0.6);
+   z-index: -1;
 }
 header{
-    display: flex;
-    justify-content: space-between;
-    padding: 50px 50px;
-    background-color: #ffffff;
-    gap: 50px;
     text-align: center;
+    padding: 60px 20px;
 }
-.logo{
-    width: 100px;
-    height: 70px;
-    margin-top: 0;
+header h1{
+    font-size: 3em;
+    margin: 0;
 }
-.hamburger{
-    font-size: 50px;
+header p{
+    font-size: 1.2em;
+    opacity: 0.9;
+}
+
+/*bouton voir plus*/
+.btn{
+    display: inline-block;
+    margin: 20px auto;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 20px;
+    background: #ff9800;
+    color: #fff;
+    font-weight: bold;
     cursor: pointer;
-}
-.menu-section{
-    display: grid; 
-    grid-template-columns: 3fr 2fr;
-    justify-content:center;
-    flex-wrap: nowrap;
-    gap: 30px;
+    transition: background 0.3s ease;
+    animation: pulse 2s infinite;
 
 }
-.box-menu{
-    width:100%;
-    border-radius: 20px;
-    background-color: #fff;
-   
+@keyframes pulse {
+    0%,100%{
+        transform:scale(1);}
+    50%{transform:scale(1.1);}
 }
-.box-menu img{
-    border-radius: 20px;
+
+.btn:hover{
+    background: #e68900;
+}
+
+/* style des card des menu de la semaine*/
+.menu-semaine{
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(320px,1fr));
+    gap: 25px;
+    padding: 40px;
+}
+.card-menu{
+    background: rgba(255,255,255,0.1);
+    border-radius: 15px;
+    overflow: hidden;
+    text-align: center;
+    backdrop-filter: blur(5px);
+    transition: transform 0.3s ease, background 0.3s ease;
+    padding-bottom: 15px;
+
+}
+.card-menu:hover{
+    transform: translateY(-10px);
+    background: rgba(255,255,255,0.2);
+}
+.card-menu h2{
+    margin: 15px 0;
+    font-size: 1.8em;
+    color: #ffd54f;
+}
+.plats{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 10px;
+    align-items: center;
+    padding: 10px 20px;
+    text-align: left;
+    
+}
+.plats img{
     width: 100%;
-    }
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.plat-text{
+    font-size: 1em;
+}
+/* style TOP PLAT DE LA SEMAINE*/
+
+.top-plat{
+   margin: 40px;
+   padding: 20px;
+   background: rgba(255,215,0,0.2);
+   border-radius: 15px;
+}
+.top-plat h3{
+    margin-top: 0;
+    color: #ffd700;
+}
+.top-plat ul{
+    list-style: none;
+    padding-left: 0;
+}
+.form-proposition{
+    display:none ;
+    position: fixed;
+    z-index: 1;
+    background-color: rgba(0,0,0,0.5); 
+    margin: 20px;
+    width: 100%;
+    height: 100%;
+
+
+}
+.formulaire{
+    background-color: #fff;
+    color: #e68900;
+    margin: 10px auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+}
+
+input,select,textarea{
+    width: 100%;
+    margin: 10px 0;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+.formulaire h2{
+    color:black;
+}
+
+button[type="submit"] {
+    background: #e68900;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+ /* Bouton fermer */
+ .fermer {
+    color: red;
+    float: right;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+  }

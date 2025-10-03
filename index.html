@@ -7,35 +7,165 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
+    <div class="over"></div>
+
+    <!--grand titre-->
     <header>
-        <div class="hamburger" id="hamburger">
-            ☰
-        </div>
-        <div class="titre">
-            <h2>Menu de la semaine</h2>
-        </div>
-        <div>
-            <img class="logo" src="./image/vecteezy_cooking-cuisine-cookery-logo-restaurant-menu-cafe_17722090.jpg" alt="" >
-    
+        <h1>🍽️ Menu de la semaine</h1>
+        <p>Découvrez chaque jour vos plats en images !</p>
+        <button class="btn" id="btnProposer" type="button" onclick="btnProposition()">➕ Proposer un plat</button>
+        <div class="form-proposition" id="proposer">
+            <div class="formulaire">
+                <span class="fermer">&times;</span>
+                <h2>Vos propositions</h2>
+                <label for="">
+                    Le jour
+                    <select name="jour" id="" required>
+                        <option value="lundi">Lundi</option>
+                        <option value="lundi">Mardi</option>
+                        <option value="lundi">Mercredi</option>
+                        <option value="lundi">Jeudi</option>
+                        <option value="lundi">Vendredi</option>
+                    </select>
+                </label>
+                <label for="">
+                    Plat
+                    <input type="text" id="nomPlat" placeholder="Entrer le nom du plat " required>
+                    Description
+                   <textarea name="" id="" required></textarea>
+                </label> 
+                <button type="submit" onclick="Envoyer()">Envoyer</button>
+            </div>
+            
         </div>
     </header>
-    <section class="menu-section">
-        <div class="box-menu">
-            <img src="./image/aebc554f-1e43-40e1-8f83-fea4780a5970.jpeg" alt="">
+    <section class="menu-semaine">
+        <!--Pour lundi-->
+        <div class="card-menu">
+            <h2>Lundi</h2>
+            <div class="plats">
+                <img src="./image/This Lemon Grilled Salmon is a light and healthy… (1).jpeg" alt="">
+                <div class="plat-text">Entrée: salade </div>
+            </div>
+            <div class="plats">
+                <img src="./image/Creamy Garlic Butter Shrimp and Rice Bowls_ A….jpeg" alt="">
+                <div class="plat-text">Plat: salade </div>
+            </div>
+            <div class="plats">
+                <img src="./image/d045916f-aafb-4520-9fd3-cee3fdbaee12.jpeg" alt="">
+                <div class="plat-text">Dessert: salade </div>
+            </div>
+            <div class="stars">
+                <span class="star" data-value="1">★</span>
+                <span class="star" data-value="2">★</span>
+                <span class="star" data-value="3">★</span>
+                <span class="star" data-value="4">★</span>
+                <span class="star" data-value="5">★</span>
+              </div>
         </div>
-        <div class="box-menu">
-            <img src="./image/Creamy Garlic Butter Shrimp and Rice Bowls_ A….jpeg" alt="">
-        </div>
-        <div class="box-menu">
-            <img src="./image/This Lemon Grilled Salmon is a light and healthy… (1).jpeg" alt="">
-        </div>
-        <div class="box-menu">
-            <img src="./image/d045916f-aafb-4520-9fd3-cee3fdbaee12.jpeg" alt="">
-        </div>
-        
 
+        <!--Pour Mardi-->
+        <div class="card-menu">
+            <h2>Mardi</h2>
+            <div class="plats">
+                <img src="./image/Creamy Garlic Butter Shrimp and Rice Bowls_ A….jpeg" alt="">
+                <div class="plat-text">Entrée: salade </div>
+            </div>
+            <div class="plats">
+                <img src="./image/This Lemon Grilled Salmon is a light and healthy… (1).jpeg" alt="">
+                <div class="plat-text">Plat: salade </div>
+            </div>
+            <div class="plats">
+                <img src="./image/aebc554f-1e43-40e1-8f83-fea4780a5970.jpeg" alt="">
+                <div class="plat-text">Dessert: salade </div>
+            </div>
+            <div class="stars">
+                <span class="star" data-value="1">★</span>
+                <span class="star" data-value="2">★</span>
+                <span class="star" data-value="3">★</span>
+                <span class="star" data-value="4">★</span>
+                <span class="star" data-value="5">★</span>
+              </div>
+        </div>
+
+        <!--Pour Mercredi-->
+        <div class="card-menu">
+            <h2>Mercredi</h2>
+            <div class="plats">
+                <img src="./image/Creamy Garlic Butter Shrimp and Rice Bowls_ A….jpeg" alt="">
+                <div class="plat-text">Entrée: salade </div>
+            </div>
+            <div class="plats">
+                <img src="./image/This Lemon Grilled Salmon is a light and healthy… (1).jpeg" alt="">
+                <div class="plat-text">Plat: salade </div>
+            </div>
+            <div class="plats">
+                <img src="./image/aebc554f-1e43-40e1-8f83-fea4780a5970.jpeg" alt="">
+                <div class="plat-text">Dessert: salade </div>
+            </div>
+            <div class="stars">
+                <span class="star" data-value="1">★</span>
+                <span class="star" data-value="2">★</span>
+                <span class="star" data-value="3">★</span>
+                <span class="star" data-value="4">★</span>
+                <span class="star" data-value="5">★</span>
+              </div>
+        </div>
+
+        <!--Pour lundi-->
+        <div class="card-menu">
+            <h2>Jeudi</h2>
+            <div class="plats">
+                <img src="./image/Creamy Garlic Butter Shrimp and Rice Bowls_ A….jpeg" alt="">
+                <div class="plat-text">Entrée: salade </div>
+            </div>
+            <div class="plats">
+                <img src="./image/Creamy Garlic Butter Shrimp and Rice Bowls_ A….jpeg" alt="">
+                <div class="plat-text">Plat: salade </div>
+            </div>
+            <div class="plats">
+                <img src="./image/d045916f-aafb-4520-9fd3-cee3fdbaee12.jpeg" alt="">
+                <div class="plat-text">Dessert: salade </div>
+            </div>
+            <div class="stars">
+                <span class="star" data-value="1">★</span>
+                <span class="star" data-value="2">★</span>
+                <span class="star" data-value="3">★</span>
+                <span class="star" data-value="4">★</span>
+                <span class="star" data-value="5">★</span>
+              </div>
+        </div>
+
+        <!--Pour Vendredi-->
+        <div class="card-menu">
+            <h2>Vendredi</h2>
+            <div class="plats">
+                <img src="./image/Creamy Garlic Butter Shrimp and Rice Bowls_ A….jpeg" alt="">
+                <div class="plat-text">Entrée: salade </div>
+            </div>
+            <div class="plats">
+                <img src="./image/Creamy Garlic Butter Shrimp and Rice Bowls_ A….jpeg" alt="">
+                <div class="plat-text">Plat: salade </div>
+            </div>
+            <div class="plats">
+                <img src="./image/d045916f-aafb-4520-9fd3-cee3fdbaee12.jpeg " alt="">
+                <div class="plat-text">Dessert: salade </div>
+            </div>
+            <div class="stars">
+                <span class="star" data-value="1">★</span>
+                <span class="star" data-value="2">★</span>
+                <span class="star" data-value="3">★</span>
+                <span class="star" data-value="4">★</span>
+                <span class="star" data-value="5">★</span>
+              </div>
+        </div>
     </section>
 
-        
+    <div class="top-plat">
+        <h3>⭐ Top plats de la semaine :</h3>
+        <ul id="top-plats-list"></ul>
+    </div>
+
+    <script src="./js/script.js"></script>
 </body>
 </html>
