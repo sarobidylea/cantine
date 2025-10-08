@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cantine Universitaire 🍽️</title>
+  <link rel="stylesheet" href="./css/style3.css">
+</head>
+<body>
+  <div class="overlay"></div>
+
+  <!-- ===== HEADER ===== -->
+  <header>
+    <h1>🍽️ Menu de la Cantine Universitaire</h1>
+    <p>Donnez votre avis et proposez vos plats préférés !</p>
+  </header>
+
+  <!-- ===== SECTION MENU ===== -->
+  <section class="menu">
+    <h2>Menu de la semaine</h2>
+    <div class="cards">
+      <!-- Exemple de plat -->
+      <div class="cardmenu" data-day="lundi">
+        <img src="./image/riz-viande.jpg" alt="Riz à la viande">
+        <h2>Lundi</h2>
+        <p>Riz à la viande et légumes sautés</p>
+        <div class="stars">
+          <span class="star">★</span>
+          <span class="star">★</span>
+          <span class="star">★</span>
+          <span class="star">★</span>
+          <span class="star">★</span>
+        </div>
+      </div>
+
+      <div class="cardmenu" data-day="mardi">
+        <img src="./image/spaghetti.jpg" alt="Spaghetti">
+        <h2>Mardi</h2>
+        <p>Spaghetti bolognaise</p>
+        <div class="stars">
+          <span class="star">★</span>
+          <span class="star">★</span>
+          <span class="star">★</span>
+          <span class="star">★</span>
+          <span class="star">★</span>
+        </div>
+      </div>
+
+      <div class="cardmenu" data-day="mercredi">
+        <img src="./image/poulet.jpg" alt="Poulet rôti">
+        <h2>Mercredi</h2>
+        <p>Poulet rôti avec riz parfumé</p>
+        <div class="stars">
+          <span class="star">★</span>
+          <span class="star">★</span>
+          <span class="star">★</span>
+          <span class="star">★</span>
+          <span class="star">★</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TOP PLATS ===== -->
+  <section class="top">
+    <h2>🏆 Top des plats préférés</h2>
+    <ul id="top-plats-list"></ul>
+  </section>
+
+  <!-- ===== FORMULAIRE DE SUGGESTION ===== -->
+  <section class="suggestions">
+    <button id="btnProposer">➕ Proposer un plat</button>
+
+    <div id="proposer" class="modal">
+      <div class="modal-content">
+        <span class="fermer">&times;</span>
+        <h3>Proposez un plat</h3>
+        <input type="text" id="nomPlat" placeholder="Nom du plat">
+        <button onclick="Envoyer()">Envoyer</button>
+      </div>
+    </div>
+
+    <h3>Vos suggestions 🍛</h3>
+    <ul id="liste-suggestions"></ul>
+  </section>
+
+  <footer>
+    <p>© 2025 Cantine Universitaire - Fait avec ❤️ par les étudiants</p>
+  </footer>
+
+  <script src="./js/script.js"></script>
+</body>
+</html>

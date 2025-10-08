@@ -13,7 +13,7 @@
     <header>
         <h1>🍽️ Menu de la semaine</h1>
         <p>Découvrez chaque jour vos plats en images !</p>
-        <button class="btn" id="btnProposer" type="button" onclick="btnProposition()">➕ Proposer un plat</button>
+        <button class="btn" id="btnProposer" type="button" o nclick="btnProposition()">➕ Proposer un plat</button>
         <div class="form-proposition" id="proposer">
             <div class="formulaire">
                 <span class="fermer">&times;</span>
@@ -39,9 +39,34 @@
             
         </div>
     </header>
+    <section class="menu-controls">
+        <div class="filters">
+            <select id="filterJour">
+                <option value="">Tous les jours</option>
+                <option value="Lundi">Lundi</option>
+                <option value="Mardi">Mardi</option>
+                <option value="Mercredi">Mercredi</option>
+                <option value="Jeudi">Jeudi</option>
+                <option value="Vendredi">Vendredi</option>
+            </select>
+
+            <select id="filterType">
+                <option value="">Tous les types</option>
+                <option value="Entrée">Entrée</option>
+                <option value="Plat">Plat</option>
+                <option value="Dessert">Dessert</option>
+            </select>
+        </div>
+
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="🔍 Rechercher un plat...">
+        </div>
+        </section>
+
     <section class="menu-semaine">
         <!--Pour lundi-->
-        <div class="card-menu">
+        
+        <div class="cardmenu">
             <h2>Lundi</h2>
             <div class="plats">
                 <img src="./image/This Lemon Grilled Salmon is a light and healthy… (1).jpeg" alt="">
@@ -65,11 +90,13 @@
         </div>
 
         <!--Pour Mardi-->
-        <div class="card-menu">
+        <div class="cardmenu">
             <h2>Mardi</h2>
             <div class="plats">
                 <img src="./image/Creamy Garlic Butter Shrimp and Rice Bowls_ A….jpeg" alt="">
-                <div class="plat-text">Entrée: salade </div>
+                <div class="plat-text">Entrée: vary </div>
+                <span class="favori" data-nom="Entrée: salade">♥</span>
+
             </div>
             <div class="plats">
                 <img src="./image/This Lemon Grilled Salmon is a light and healthy… (1).jpeg" alt="">
@@ -77,7 +104,7 @@
             </div>
             <div class="plats">
                 <img src="./image/aebc554f-1e43-40e1-8f83-fea4780a5970.jpeg" alt="">
-                <div class="plat-text">Dessert: salade </div>
+                <div class="plat-text">Dessert: soupe </div>
             </div>
             <div class="stars">
                 <span class="star" data-value="1">★</span>
@@ -89,7 +116,7 @@
         </div>
 
         <!--Pour Mercredi-->
-        <div class="card-menu">
+        <div class="cardmenu">
             <h2>Mercredi</h2>
             <div class="plats">
                 <img src="./image/Creamy Garlic Butter Shrimp and Rice Bowls_ A….jpeg" alt="">
@@ -113,7 +140,7 @@
         </div>
 
         <!--Pour lundi-->
-        <div class="card-menu">
+        <div class="cardmenu">
             <h2>Jeudi</h2>
             <div class="plats">
                 <img src="./image/Creamy Garlic Butter Shrimp and Rice Bowls_ A….jpeg" alt="">
@@ -137,7 +164,7 @@
         </div>
 
         <!--Pour Vendredi-->
-        <div class="card-menu">
+        <div class="cardmenu">
             <h2>Vendredi</h2>
             <div class="plats">
                 <img src="./image/Creamy Garlic Butter Shrimp and Rice Bowls_ A….jpeg" alt="">
@@ -160,8 +187,74 @@
               </div>
         </div>
     </section>
+    <!-- 🗓️ PLANIFICATEUR DE REPAS -->
+    <section class="planificateur">
+        <h2>🗓️ Mon planificateur de repas</h2>
+        <p>Écris tes repas pour chaque jour de la semaine 🍽️</p>
+    
+        <div class="planning-grid">
+        <div class="jour">
+            <h3>Lundi</h3>
+            <input type="text" id="repas-lundi" placeholder="Ex : Riz sauté au poulet">
+        </div>
+    
+        <div class="jour">
+            <h3>Mardi</h3>
+            <input type="text" id="repas-mardi" placeholder="Ex : Salade César">
+        </div>
+    
+        <div class="jour">
+            <h3>Mercredi</h3>
+            <input type="text" id="repas-mercredi" placeholder="Ex : Lasagnes">
+        </div>
+    
+        <div class="jour">
+            <h3>Jeudi</h3>
+            <input type="text" id="repas-jeudi" placeholder="Ex : Brochettes de bœuf">
+        </div>
+    
+        <div class="jour">
+            <h3>Vendredi</h3>
+            <input type="text" id="repas-vendredi" placeholder="Ex : Poisson grillé">
+        </div>
+        </div>
+    
+        <button id="btn-save-planning" class="btn">💾 Sauvegarder mon planning</button>
+    
+        <div class="resume">
+        <h3>📋 Mon planning sauvegardé</h3>
+        <ul id="liste-planning"></ul>
+        </div>
+    </section>
+    <!-- 📊 STATISTIQUES ET SONDAGE -->
+<section class="stats-sondage">
+    <div class="statistiques">
+      <h2>📈 Statistiques des votes</h2>
+      <canvas id="chartVotes" width="400" height="200"></canvas>
+    </div>
+  
+    <div class="sondage">
+      <h2>🥇 Sondage : Plat du mois</h2>
+      <p>Vote pour ton plat préféré parmi les plats affichés cette semaine 🍛</p>
+  
+      <div class="options-sondage" id="options-sondage"></div>
+  
+      <button id="btnVoteSondage" class="btn">🗳️ Voter</button>
+  
+      <div class="resultats-sondage">
+        <h3>📊 Résultats du sondage</h3>
+        <ul id="resultats-liste"></ul>
+      </div>
+    </div>
+  </section>
+  
+    <div class="suggestions">
+        <h3>💡 Vos suggestions :</h3>
+        <ul id="liste-suggestions"></ul>
+    </div>
+      
 
-    <div class="top-plat">
+    <div class="top-plats">
         <h3>⭐ Top plats de la semaine :</h3>
         <ul id="top-plats-list"></ul>
     </div>
